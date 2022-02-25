@@ -4,10 +4,12 @@ state={term:''}
 onInputChange = (event)=>{
     this.setState({
         term:event.target.value
+         
     })
 }
 onFormSubmit = (e) =>{
     e.preventDefault();
+    this.props.onFormSubmit(this.state.term)
 }
     render(){
 
