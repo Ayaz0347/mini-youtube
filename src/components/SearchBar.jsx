@@ -7,7 +7,7 @@ onInputChange = (event)=>{
     })
 }
 onFormSubmit = (e) =>{
-    
+    e.preventDefault();
 }
     render(){
 
