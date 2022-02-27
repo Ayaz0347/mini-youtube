@@ -1,11 +1,20 @@
 import React from "react";
-import VideoList from "./VideoList";
-  const VideoItem = ({myVideo}) => {
+import './VideoItem.css';
+
+const VideoItem = ({myVideo}) => {
   return (
-    <div>
-        <img src={myVideo.snippet.thumbnails.medium.url} alt="" />
-        {myVideo.snippet.description}
+    <div className=" video-item item">
+        <img className="ui image" src={myVideo.snippet.thumbnails.medium.url} alt="" />
+        <div className="content">
+          <div className="header">
+          {myVideo.snippet.title}
+          </div>
+          <div className="description">
+          {myVideo.snippet.description}
+          </div>
         </div>
+
+    </div>
   )
 }
 export default VideoItem;
